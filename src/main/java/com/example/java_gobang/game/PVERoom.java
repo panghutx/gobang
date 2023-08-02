@@ -53,6 +53,9 @@ public class PVERoom {
             response.setP(1);
             response.setpRow(row);
             response.setWinner(winner);
+            String respJson = objectMapper.writeValueAsString(response);
+            session.sendMessage(new TextMessage(respJson));
+            return;
         }
         //TODO 机器人下棋
         int[] ai = AIpush();
