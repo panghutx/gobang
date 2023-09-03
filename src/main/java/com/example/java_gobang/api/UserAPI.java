@@ -56,12 +56,14 @@ public class UserAPI {
         UserResponse response = new UserResponse();
         try {
             User user = new User();
-            user.setUsername(userReq.get("username"));
+            String username=userReq.get("username");
+            user.setUsername(username);
             String password = PwdUtil.encrypt(userReq.get("password"));
             user.setPassword(password);
             userMapper.insert(user);
             response.setCode(3000);
             response.setMsg("注册成功");
+            response.setData(JwtUtil.generateToken(username));
             return response;
         } catch (org.springframework.dao.DuplicateKeyException e) {
             response.setCode(5000);

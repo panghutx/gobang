@@ -21,10 +21,7 @@ public class PVERoom {
 
     // 创建 ObjectMapper 用来转换 JSON
     private ObjectMapper objectMapper = new ObjectMapper();
-
-
-    private UserMapper userMapper;
-
+    
     // 通过这个方法来处理一次落子操作.
     // 要做的事情:
     public void putChess(String reqJson,WebSocketSession session) throws IOException {

@@ -4,7 +4,6 @@ import com.example.java_gobang.game.*;
 import com.example.java_gobang.model.User;
 import com.example.java_gobang.model.UserMapper;
 import com.example.java_gobang.utils.JwtUtil;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
